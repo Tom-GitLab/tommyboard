@@ -4,7 +4,7 @@ export default {
       emailOrUsername: 'E-mail or username',
       invalidEmailOrUsername: 'Invalid e-mail or username',
       invalidPassword: 'Invalid password',
-      logInToPlanka: 'Log in to Planka',
+      logInToPlanka: 'Log in to TommyBoard',
       noInternetConnection: 'No internet connection',
       pageNotFound_title: 'Page Not Found',
       password: 'Password',
@@ -16,7 +16,7 @@ export default {
 
     action: {
       logIn: 'Log in',
-      logInWithSSO: 'Log in with SSO',
+      logInWithSSO: 'Log in with Discord',
     },
   },
 };

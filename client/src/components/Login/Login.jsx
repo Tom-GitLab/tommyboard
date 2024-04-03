@@ -138,6 +138,7 @@ const Login = React.memo(
     }, [focusPasswordFieldState]);
 
     return (
+    <>
       <div className={classNames(styles.wrapper, styles.fullHeight)}>
         <Grid verticalAlign="middle" className={styles.fullHeightPaddingFix}>
           <Grid.Column widescreen={4} largeScreen={5} computer={6} tablet={16} mobile={16}>
@@ -228,7 +229,7 @@ const Login = React.memo(
           >
             <div className={styles.descriptionWrapperOverlay} />
             <div className={styles.descriptionWrapper}>
-              <Header inverted as="h1" content="Planka" className={styles.descriptionTitle} />
+              <Header inverted as="h1" content="TommyBoard" className={styles.descriptionTitle} />
               <Header
                 inverted
                 as="h2"
@@ -239,6 +240,12 @@ const Login = React.memo(
           </Grid.Column>
         </Grid>
       </div>
+      {/* Credit section */}
+      <div className={styles.creditSection}>
+        Source on <a href="https://github.com/Tom-GitLab/tommyboard" target="_blank" rel="noopener noreferrer">GitHub</a> | Forked from <a href="https://github.com/plankanban/planka" target="_blank" rel="noopener noreferrer">Planka</a>
+      </div>
+      </>
+      
     );
   },
 );
