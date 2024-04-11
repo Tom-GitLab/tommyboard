@@ -242,7 +242,7 @@ const Login = React.memo(
       </div>
       {/* Credit section */}
       <div className={styles.creditSection}>
-        Source on <a href="https://github.com/Tom-GitLab/tommyboard" target="_blank" rel="noopener noreferrer">GitHub</a> | Forked from <a href="https://github.com/plankanban/planka" target="_blank" rel="noopener noreferrer">Planka</a>
+        Source on <a href="https://github.com/tomlyo/tommyboard" target="_blank" rel="noopener noreferrer">GitHub</a> | Forked from <a href="https://github.com/plankanban/planka" target="_blank" rel="noopener noreferrer">Planka</a>
       </div>
       </>
       
