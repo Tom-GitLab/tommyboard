@@ -14,6 +14,11 @@ export default class extends BaseModel {
     position: attr(),
     name: attr(),
     description: attr(),
+    creatorUserId: oneToOne({
+      to: 'User',
+      as: 'creatorUser',
+      relatedName: 'ownCards',
+    }),
     dueDate: attr(),
     stopwatch: attr(),
     isSubscribed: attr({
@@ -165,6 +170,14 @@ export default class extends BaseModel {
         } catch {} // eslint-disable-line no-empty
 
         break;
+      case ActionTypes.LIST_SORT__SUCCESS:
+      case ActionTypes.LIST_SORT_HANDLE:
+      case ActionTypes.NOTIFICATION_CREATE_HANDLE:
+        payload.cards.forEach((card) => {
+          Card.upsert(card);
+        });
+
+        break;
       case ActionTypes.CARD_CREATE:
       case ActionTypes.CARD_UPDATE__SUCCESS:
       case ActionTypes.CARD_UPDATE_HANDLE:
@@ -282,12 +295,6 @@ export default class extends BaseModel {
 
         break;
       }
-      case ActionTypes.NOTIFICATION_CREATE_HANDLE:
-        payload.cards.forEach((card) => {
-          Card.upsert(card);
-        });
-
-        break;
       default:
     }
   }
