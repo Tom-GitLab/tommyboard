@@ -25,7 +25,7 @@ module.exports = {
     username: {
       isNotEmptyString: true,
       minLength: 3,
-      maxLength: 16,
+      maxLength: 32,
       regex: /^[_a-zA-Z0-9.]*$/,
       allowNull: true,
     },
